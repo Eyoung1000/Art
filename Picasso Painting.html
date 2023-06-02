@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Picasso.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artwork</title>
+
+<body>
+    <style>
+    
+.shadow-text {
+      font-size: 72px;
+      text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .sun {
+      font-size: 50px;
+      line-height: 1;
+    }
+    
+        .container {
+          display: grid;
+          height: 200px;
+          background-color: red;
+        }
+        
+        .box {
+          width: 200px;
+          height: 100px;
+          background-color: blue;
+          color: orange;
+          text-align: center;
+          font-size: 18px;
+        }
+
+
+        .container {
+          display: grid;
+          place-items: center;
+          height: 200px;
+          background-color: red;
+        }
+        
+        .box {
+          width: 300px;
+          height: 70px;
+          background-color: orchid;
+          color: orange;
+          text-align: center;
+          font-size: 55px;
+        }
+
+        .container1 {
+      display: flex;
+    }
+    
+    .box1 {
+      flex: 1;
+      height: 100px;
+      background-color: blueviolet;
+      margin: 1px;
+    }
+
+
+    .container2 {
+      display: flex;
+      z-index: 1;
+    }
+    
+    .box2 {
+      flex: 1;
+      height: 75px;
+      margin: 1px;
+    }
+    
+    .container2 .box2:nth-child(1) {
+      z-index: 9;
+      background-color: aqua;
+    }
+    
+    .container2 .box2:nth-child(2) {
+      z-index: 8;
+      background-color: turquoise;
+    }
+    
+    .container2 .box2:nth-child(3) {
+      z-index: 7;
+      background-color: orange;
+    }
+    
+    .container2 .box2:nth-child(4) {
+      z-index: 6;
+      background-color: green;
+    }
+    
+    .container2 .box2:nth-child(5) {
+      z-index: 5;
+      background-color: blue;
+    }
+    
+    .container2 .box2:nth-child(6) {
+      z-index: 4;
+      background-color: indigo;
+    }
+    
+    .container2 .box2:nth-child(7) {
+      z-index: 3;
+      background-color: violet;
+    }
+    
+    .container2 .box2:nth-child(8) {
+      z-index: 2;
+      background-color: purple;
+    }
+    
+    .container2 .box2:nth-child(9) {
+      z-index: 1;
+      background-color: pink;
+    }
+
+    .triangle {
+      width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      display: inline;
+    }
+
+    .triangle-small {
+      border-bottom: 50px solid paleturquoise;
+    }
+
+    .triangle-medium {
+      border-bottom: 100px solid blue;
+    }
+
+    .triangle-large {
+      border-bottom: 150px solid green;
+    }
+
+    .triangle-xlarge {
+      border-bottom: 200px solid turquoise;
+    }
+
+    .circle {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      display: inline-block;
+      margin: 10px;
+    }
+
+    .circle-small {
+      width: 50px;
+      height: 50px;
+      background-color: darkorange;
+    }
+
+    .circle-medium {
+      width: 75px;
+      height: 75px;
+      background-color:lightgoldenrodyellow;
+    }
+
+    .circle-large {
+      width: 125px;
+      height: 125px;
+      background-color: chartreuse;
+    }
+
+    .circle-xlarge {
+      width: 150px;
+      height: 150px;
+      background-color: teal;
+    }
+    .star {
+      position: relative;
+      width: 0;
+      height: 0;
+      border-left: 25px solid transparent;
+      border-right: 25px solid transparent;
+      border-bottom: 40px solid yellow;
+    }
+
+    .star::before {
+      content: "";
+      position: absolute;
+      top: -15px;
+      left: -25px;
+      width: 0;
+      height: 0;
+      border-left: 25px solid transparent;
+      border-right: 25px solid transparent;
+      border-bottom: 40px solid yellow;
+      transform: rotate(35deg);
+    }
+
+    .star::after {
+      content: "";
+      position: absolute;
+      top: -15px;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: 25px solid transparent;
+      border-right: 25px solid transparent;
+      border-bottom: 40px solid yellow;
+      transform: rotate(-35deg);
+    }
+
+    .glow {
+      animation: glowing 2s ease-in-out infinite;
+    }
+
+    @keyframes glowing {
+      0% {
+        box-shadow: 0 0 5px yellow;
+      }
+      50% {
+        box-shadow: 0 0 20px 5px yellow;
+      }
+      100% {
+        box-shadow: 0 0 5px yellow;
+      }
+    }
+
+    .diamond {
+      width: 0;
+      height: 0;
+      border: 30px solid transparent;
+      border-bottom-color: black;
+      display: inline-block;
+      transform: rotate(45deg);
+      margin: 10px;
+    }
+
+    .small {
+      border-width: 10px;
+    }
+
+    .medium {
+      border-width: 20px;
+    }
+
+    .large {
+      border-width: 30px;
+    }
+    
+      </style>
+    </head>
+    <body>
+
+        <div class="triangle triangle-medium"></div>
+      <div class="triangle triangle-xlarge"></div>
+      <div class="triangle triangle-large"></div>
+      <div class="triangle triangle-small"></div>
+      <div class="triangle triangle-medium"></div>
+      <div class="triangle triangle-xlarge"></div>
+      <div class="triangle triangle-large"></div>
+      <div class="triangle triangle-small"></div>
+        <div class="triangle triangle-medium"></div>
+      <div class="triangle triangle-xlarge"></div>
+      <div class="triangle triangle-large"></div>
+      <div class="triangle triangle-small"></div>
+        
+      <div class="container">
+        <div class="box">
+            
+          Art <div>&#x1F3C2;&#xFE0E;</div> <div>&#127769;</div>
+          <div class="sun">&#9728;&#xFE0E;</div>
+
+        </div>
+      </div>
+
+      <div class="circle circle-small"></div>
+<div class="circle circle-medium"></div>
+<div class="circle circle-large"></div>
+<div class="circle circle-xlarge">
+
+</div><div class="circle circle-small"></div>
+<div class="circle circle-medium"></div>
+<div class="circle circle-large"></div>
+<div class="circle circle-xlarge"></div>
+      <div class="container1">
+        <div class="box1">
+          <div class="circle circle-small"></div>
+          <div class="circle circle-medium"></div>
+          <div class="circle circle-medium"></div>
+          <div class="circle circle-small"></div>
+        </div>
+        <div class="box1">
+            <div class="circle circle-medium"></div>
+            <div class="circle circle-small"></div>
+            <div class="circle circle-small"></div>
+            <div class="circle circle-medium"></div>
+        </div>
+        <div class="box1">
+            <div class="circle circle-small"></div>
+            <div class="circle circle-medium"></div>
+            <div class="circle circle-medium"></div>
+            <div class="circle circle-small"></div>
+        </div>
+      </div>
+
+
+      <div class="container2">
+        <div class="box2">  <div class="star glow"></div></div>
+        <div class="box2"> <div class="star glow"></div></div>
+        <div class="box2"> <div class="star glow"></div></div>
+        <div class="box2"> <div class="star glow"></div></div>
+        <div class="box2"> <div class="star glow"></div></div>
+        <div class="box2"> <div class="star glow"></div></div>
+        <div class="box2"> <div class="star glow"></div></div>
+        <div class="box2"> <div class="star glow"></div></div>
+        <div class="box2"> <div class="star glow"></div></div>
+      </div>
+
+
+      <div class="triangle triangle-medium"></div>
+      <div class="triangle triangle-xlarge"></div>
+      <div class="triangle triangle-large"></div>
+      <div class="triangle triangle-small"></div>
+      <div class="triangle triangle-medium"></div>
+      <div class="triangle triangle-xlarge"></div>
+      <div class="triangle triangle-large"></div>
+      <div class="triangle triangle-small"></div>
+      
+</div>
+<div class="form-container">
+  <form class="form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    <button type="submit"><a href="Other.html">Submit</a></button>
+  </form>
+</div>
+
+<h1 class="shadow-text">Do you like this? &#x1F58C; </h1>
+<p>
+    <div class="diamond small"></div>
+    <div class="diamond medium"></div>
+    <div class="diamond large"></div>
+<div class="circle circle-small"></div>
+<div class="circle circle-medium"></div>
+<div class="circle circle-large"></div>
+<div class="circle circle-xlarge"></div>
+<div class="diamond large"></div>
+<div class="diamond medium"></div>
+<div class="diamond small"></div>
+</p>
+
+</body>
+</html>
+
+
